@@ -12,14 +12,22 @@ API Rest Do Projeto Dark Thrift Store, um Brecho alternativo com valores acessiv
 - [ ] Dashboard
 
 ## Documentação
+___
+## Funcionalidades
+-  [Categoria](#categoria) 
+-  [Produto](#produto)
+-  [Usúario](#usuario)
+-  [Venda](#venda)
+-  [Favoritos](#favoritos)
 
+## Categoria
 ### Endpoints
 
 - [Lista Categorias](#listar-categorias)
-- Cadastrar Categoria
-- Apagar Categoria
-- Detalhar Categoria
-- Atualizar Ctegoria
+- [Cadastrar Categoria](#cadastrar-categoria)
+- [Apagar Categoria](#apagar-categoria)
+- [Detalhar Categoria](#detalhar-categoria)
+- [Atualizar Categoria](#atualizar-categoria)
 
 ### Listar Categorias
 

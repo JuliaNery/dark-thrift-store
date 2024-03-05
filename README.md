@@ -156,4 +156,4 @@ Atualiza os dados
 |201| Categoria cadastrada com Sucesso |
 |400| Validação falhou, verifique os dados enviados no request body|
 |401| Não autorizado. Realiza a autenticação em /login|
-|404| Categoria não encontrada|
+|404| Categoria não encontrada****|

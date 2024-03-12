@@ -21,13 +21,14 @@ ___
 -  [Favoritos](#favoritos)
 
 ## Categoria
+
 ### Endpoints
 
 - [Lista Categorias](#listar-categorias)
-- [Cadastrar Categoria](#cadastrar-categoria)
-- [Apagar Categoria](#apagar-categoria)
-- [Detalhar Categoria](#detalhar-categoria)
-- [Atualizar Categoria](#atualizar-categoria)
+- Cadastrar Categoria
+- Apagar Categoria
+- Detalhar Categoria
+- Atualizar Ctegoria
 
 ### Listar Categorias
 

@@ -31,30 +31,21 @@ public class CategoriaController {
     }
 
     @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
-    public CategoriaEntity create(@RequestBody CategoriaEntity categoria){ //binding
+    public ResponseEntity<CategoriaEntity> create(@RequestBody CategoriaEntity categoria) { //binding
         log.info("cadastrando categoria " + categoria);
         categoriaRepository.save(categoria);
-        return ResponseEntity.created(URI.create("https://localhost:8080/categoria/{id}/cadastrada")).body(categoria).getBody();
+        return ResponseEntity.created(URI.create("https://localhost:8080/categoria/{id}/cadastrada")).body(categoria);
     }
 
     @GetMapping("{id}")
     public ResponseEntity<CategoriaEntity> show(@PathVariable Long id){
-        log.info("buscar categoria por id {} ", id);
-        var categoria = categoriaRepository.findById(id);
-        return categoriaRepository.findById(id)
-                .map(ResponseEntity::ok) //(c) ->  ResponseEntity.ok(c)
-                .orElse(ResponseEntity.notFound().build());
-    }
+            log.info("buscar categoria por id {} ", id);
+            var categoria = categoriaRepository.findById(id);
+            return categoriaRepository.findById(id)
+                    .map(ResponseEntity::ok) //(c) ->  ResponseEntity.ok(c)
+                    .orElse(ResponseEntity.notFound().build());
+        }
 
-    @DeleteMapping("{id}")
-    public ResponseEntity<CategoriaEntity> delete(@PathVariable Long id){
-        log.info("deleta categoria por id {} ", id);
-        verifyExists(id);
-        categoriaRepository.deleteById(id);
-
-        return ResponseEntity.noContent().build();
-    }
 
 
     @PutMapping("{id}")

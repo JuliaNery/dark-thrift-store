@@ -7,11 +7,20 @@ API Rest Do Projeto Dark Thrift Store, um Brecho alternativo com valores acessiv
 - [ ] CRUD De Categorias
 - [ ] CRUD de Produtos
 - [ ] CRUD de Vendas
-- [ ] CRUD de Usuarios
+- [ ] CRUD de Usuários
 - [ ] Autenticação
 - [ ] Dashboard
 
 ## Documentação
+___
+## Funcionalidades
+-  [Categoria](#categoria) 
+-  [Produto](#produto)
+-  [Usúario](#usuario)
+-  [Pedido](#pedido)
+-  [Favoritos](#favoritos)
+
+## Categoria
 
 ### Endpoints
 
@@ -156,4 +165,16 @@ Atualiza os dados
 |201| Categoria cadastrada com Sucesso |
 |400| Validação falhou, verifique os dados enviados no request body|
 |401| Não autorizado. Realiza a autenticação em /login|
+<<<<<<< HEAD
 |404| Categoria não encontrada****|
+=======
+|404| Categoria não encontrada|
+
+## Produto
+
+## Usuário
+
+## Pedido
+
+## Favoritos
+>>>>>>> 0316accfe1b4439465f3d6f8b9b62485d709cf3d

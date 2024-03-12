@@ -6,11 +6,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.*;
 
+
 @Entity
-@Data
 @AllArgsConstructor
-@NoArgsConstructor
-@Builder
+@Getter
+@Setter
 public class CategoriaEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

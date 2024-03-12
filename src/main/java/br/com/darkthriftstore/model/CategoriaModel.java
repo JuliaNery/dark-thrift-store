@@ -8,3 +8,4 @@ public record CategoriaModel(Long id, String nome) {
         this.nome = nome;
     }
 }
+

@@ -1,5 +1,6 @@
 package br.com.darkthriftstore.controller;
 
+
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,12 +11,12 @@ import br.com.darkthriftstore.repository.CategoriaRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import static org.springframework.http.HttpStatus.NOT_FOUND;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
+
+import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 
 @RestController
@@ -58,10 +59,19 @@ public class CategoriaController {
         return ResponseEntity.ok(categoriaEntity);
     }
 
+    @DeleteMapping("{id}")
+    public ResponseEntity<CategoriaEntity> delete(@PathVariable Long id){
+        log.info("deleta categoria por id {} ", id);
+
+        verifyExists(id);
+        categoriaRepository.deleteById(id);
+
+        return ResponseEntity.noContent().build();
+    }
+
     public void verifyExists(Long id){
         categoriaRepository.findById(id)
                 .orElseThrow(()->new ResponseStatusException(NOT_FOUND," Não existe categoria com o id informado"));
 
     }
-
 }

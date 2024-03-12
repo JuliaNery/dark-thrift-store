@@ -4,13 +4,12 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import lombok.*;
-
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
 @Entity
 @AllArgsConstructor
-@Getter
-@Setter
+@Data
 public class CategoriaEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

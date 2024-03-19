@@ -8,6 +8,7 @@ import java.util.Optional;
 
 import br.com.darkthriftstore.entity.CategoriaEntity;
 import br.com.darkthriftstore.repository.CategoriaRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,7 @@ import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @RestController
 @RequestMapping("categoria")
+@Slf4j
 public class CategoriaController {
     Logger log = LoggerFactory.getLogger(getClass());
     @Autowired

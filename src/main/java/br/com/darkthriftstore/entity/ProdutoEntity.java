@@ -1,7 +1,9 @@
 package br.com.darkthriftstore.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.Size;
 import lombok.*;
 
 import java.math.BigDecimal;
@@ -10,6 +12,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@Builder
 public class ProdutoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

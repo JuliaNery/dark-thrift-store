@@ -1,20 +1,18 @@
 package br.com.darkthriftstore.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
 @AllArgsConstructor
-@Getter
-@Setter
+@Data
+@Builder
 public class FavoritoEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)    private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @ManyToOne(fetch = FetchType.LAZY)
     private UsuarioEntity usuario;
+    @ManyToOne(fetch = FetchType.LAZY)
     private ProdutoEntity produto;
 }

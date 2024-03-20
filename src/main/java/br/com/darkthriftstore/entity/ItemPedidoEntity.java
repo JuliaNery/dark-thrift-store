@@ -2,6 +2,7 @@ package br.com.darkthriftstore.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -9,6 +10,7 @@ import java.math.BigDecimal;
 @Entity
 @AllArgsConstructor
 @Data
+@Builder
 public class ItemPedidoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

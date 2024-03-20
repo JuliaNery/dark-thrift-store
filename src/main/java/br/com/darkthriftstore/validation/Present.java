@@ -1,6 +1,7 @@
 package br.com.darkthriftstore.validation;
 
 import jakarta.validation.Constraint;
+import jakarta.validation.Payload;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -13,4 +14,7 @@ import java.time.LocalDate;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Present {
     String message() default "Data invalida";
+    Class<?>[] groups() default {};
+
+    Class<? extends Payload>[] payload() default {};
 }

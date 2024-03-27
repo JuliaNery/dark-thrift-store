@@ -8,6 +8,7 @@ import java.util.Optional;
 
 import br.com.darkthriftstore.entity.CategoriaEntity;
 import br.com.darkthriftstore.repository.CategoriaRepository;
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,7 +35,7 @@ public class CategoriaController {
     }
 
     @PostMapping
-    public ResponseEntity<CategoriaEntity> create(@RequestBody CategoriaEntity categoria) { //binding
+    public ResponseEntity<CategoriaEntity> create(@RequestBody @Valid CategoriaEntity categoria) { //binding
         log.info("cadastrando categoria " + categoria);
         categoriaRepository.save(categoria);
         return ResponseEntity.created(URI.create("https://localhost:8080/categoria/{id}/cadastrada")).body(categoria);
